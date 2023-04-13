@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,400&display=swap);
 @charset "UTF-8";
 @font-face {
   font-family: OpenSans_Condensed;
@@ -7,6 +7,28 @@
   font-weight: 300;
   font-style: normal;
 }
+:root {
+  --black: #232727;
+  --white: #ffffff;
+  --extra-black: #000000;
+  --grey-0: #242828;
+  --grey-1: #b3b3b3;
+  --grey-2: #fafbfb;
+  --grey-3: #edf0f0;
+  --blue: #1d509a;
+  --orange: #f14040;
+  --red: #ee5353;
+  --primary-text: var(--black);
+  --white-text: var(--white);
+  --ligth-text: var(--grey-1);
+  --link-text: var(--blue);
+  --light-gray-bg: var(--grey-2);
+  --grey-bg: var(grey-3);
+  --grandient-grey: linear-gradient(180deg, rgba(255, 255, 255, 0.7) 0%, rgba(210, 214, 216, 0.7) 100%);
+  --gradient-orange: linear-gradient(180deg, #eb2613 0%, #fc5b2a 100%);
+  --gradient-dark: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
 * {
   padding: 0px;
   margin: 0px;
@@ -28,7 +50,7 @@ body {
 body {
   color: #232727;
   line-height: 1;
-  font-family: "'Open Sans', sans-serif";
+  font-family: "Open Sans";
   font-size: 1rem;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
@@ -40,7 +62,7 @@ body {
 input,
 button,
 textarea {
-  font-family: "'Open Sans', sans-serif";
+  font-family: "Open Sans";
   font-size: inherit;
 }
 
@@ -111,6 +133,20 @@ h6 {
   padding: 0 0.9375rem;
 }
 
+input[type=text],
+input[type=email],
+input[type=tel],
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+textarea.input {
+  resize: none;
+  padding: 0px 0px;
+}
+
 [class*=-ibg] {
   position: relative;
 }
@@ -127,6 +163,45 @@ h6 {
   object-fit: contain;
 }
 
+.logo {
+  display: flex;
+  align-items: center;
+  max-width: 233px;
+}
+.logo__icon {
+  margin-right: 18px;
+}
+.logo__description {
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.64;
+  letter-spacing: 0.44px;
+  color: var(--ligth-text);
+}
+
+.menu {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 1.85;
+  letter-spacing: 0.44px;
+  color: var(--white);
+}
+.menu__list {
+  display: flex;
+  flex-direction: row;
+  column-gap: 18px;
+}
+.header {
+  background-color: #242828;
+}
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 /*
 .icon-menu {
 	display: none;
