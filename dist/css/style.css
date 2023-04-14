@@ -23,7 +23,7 @@
   --ligth-text: var(--grey-1);
   --link-text: var(--blue);
   --light-gray-bg: var(--grey-2);
-  --grey-bg: var(grey-3);
+  --grey-bg: var(--grey-3);
   --grandient-grey: linear-gradient(180deg, rgba(255, 255, 255, 0.7) 0%, rgba(210, 214, 216, 0.7) 100%);
   --gradient-orange: linear-gradient(180deg, #eb2613 0%, #fc5b2a 100%);
   --gradient-dark: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
@@ -103,6 +103,9 @@ h6 {
   font-size: inherit;
 }
 
+body {
+  font-weight: 400;
+}
 .lock body {
   overflow: hidden;
   touch-action: none;
@@ -145,6 +148,29 @@ textarea {
 textarea.input {
   resize: none;
   padding: 0px 0px;
+}
+
+.input {
+  width: 100%;
+  background: transparent;
+  outline: none;
+}
+.input::placeholder {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 1.64;
+  letter-spacing: 0.44px;
+}
+.input__label {
+  display: flex;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  padding: 10px 21px 10px 15px;
+}
+.input__label img {
+  cursor: pointer;
 }
 
 [class*=-ibg] {
@@ -192,10 +218,16 @@ textarea.input {
 .menu__list {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   column-gap: 18px;
+  row-gap: 5px;
+}
+.info-header__menu {
+  margin-bottom: 18px;
 }
 .header {
   background-color: #242828;
+  padding: 25px 0;
 }
 .header__container {
   display: flex;
