@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20230416215529">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230417235324">
 	<link rel="icon" href="favicon.ico" type="image/x-icon">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -51,13 +51,19 @@
 				<div class="header__actions actions">
 					<div class="actions__phone">
 						<div class="actions__phone-body">
-							<img class="actions__icon" src="img/icons/phone.svg" alt="Иконка телефона">
+							<picture>
+								<source media="(min-width: 768px)" srcset="img/icons/phone.svg">
+								<img class="actions__icon" src="img/icons/phone-white-bg.svg" alt="Иконка телефона">
+							</picture>
 							<a href="tel:88005000814" class="actions__number">8 (800) 500-08-14</a>
 						</div>
 						<div class="actions__free-call">— звонок бесплатный</div>
 					</div>
 					<div class="actions__location">
-						<img class="actions__icon" src="img/icons/address.svg" alt="Иконка локации">
+						<picture>
+							<source media="(min-width: 768px)" srcset="img/icons/address.svg">
+							<img class="actions__icon" src="img/icons/address-white-bg.svg" alt="adress">
+						</picture>
 						<a href="#" class="actions__link-title">Екатеринбург</a>
 						<div data-spollers class="actions__spollers">
 							<div class="actions__body">
@@ -73,8 +79,8 @@
 							</div>
 						</div>
 					</div>
-					<div class="actions__button">
-						<button data-popup="#call-me" type="button" class="button button_action">Перезвоните мне</button>
+					<div class="actions__button" data-da=".actions, 1250">
+						<button data-da=".menu__body, 510" data-popup="#call-me" type="button" class="button button_action">Перезвоните мне</button>
 					</div>
 					<div class="actions__mail">
 						<img class="actions__icon" src="img/icons/mail.svg" alt="Иконка почты">
@@ -126,7 +132,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20230416215529"></script>
+	<script src="js/app.min.js?_v=20230417235324"></script>
 </body>
 
 </html>
